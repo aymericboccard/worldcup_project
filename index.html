@@ -41,8 +41,6 @@
     <p>Pour la taille, on a deux options: unique et ranking. Comme le nom le suggère, l’option unique sert à choisir une seule taille pour tous les noeuds. L’option ranking va donner des tailles différentes en fonction du paramètre choisi. Sélectionnez le champ Degree et regardez le résultat. Les noeuds avec le plus grand rang sont plus grand que les autres.</p>
     <p>Pour la couleur on a exactement la même logique et on a une autre option: Partition. Cette option nous permet visualiser en couleurs différents attributs qui sont donnés comme texte. Sélectionnez le champ country et regardez le résultat. Chaque pays a une couleur différente. </p>
     <p>Observation: comme vous avez certainement observé, on a les mêmes options pour les arcs dans l’onglet Edges. La logique pour les utiliser est la même.</p>
-    <img src="images/graph-countries.svg" class="col-m-12 col-5">
-    <img src="images/graph-degree.svg" class="col-m-12 col-5">
   </section>
 
   <section class="col-11 col-m-12">
@@ -50,11 +48,17 @@
     <p>Vous devrez avoir à cet étape des noeuds et arcs en couleur et de différentes tailles. Mais leur position dans l'espace est encore la même, donc pas très visible.</p>
     <p>Trouvez l’onglet Layout. Vous verrez plusieurs options disponibles. Chacune d'entre elles est un algorithme de réorganisations des noeuds dans l’espace. Essayez-en quelques un, changez les paramètres… Vous verrez qu’il y a des groupes qui commencent à se former.</p>
     <p>Vos graphes doivent ressembler aux graphes suivants, pour ces algorithmes.</p>
+    <img src="images/graph-countries.svg" class="col-m-12 col-5">
+    <img src="images/graph-degree.svg" class="col-m-12 col-5">
   </section>
 
   <section class="col-11 col-m-12">
     <h3>2.3. Data Laboratory</h3>
-
+    <p>Une autre partie intéressante à explorer est identifiée comme Data Laboratory. Entre tous les outils disponibles, vous pouvez commencer avec les trois suivants;</p>
+    <p>Data Table: toutes les données associées soit aux noeuds soit aux arcs. Ces données peuvent être celles que vous avez importé au début ou bien d'autres qui ont été calculées.  Vous pouvez modifier et ajouter ou enlever arcs, noeuds ou même des colonnes complètes.</p>
+    <p>Statistics: c'est un exemple où les données calculées peuvent venir. L’onglet statistics offre déjà plusieurs calculs qui sont très communs dans le traitement de graphes, comme par exemple page rank, modularité, diamètre du réseaux, etc. Quand un des ces calculs retourne une valeur pour chaque ligne, ce résultat est affiché comme une nouvelle colonne qui peut être visualisée dans Data Table. En plus, cette nouvelle colonne est aussi disponible pour les réglages de taille/couleur que nous avons vu dans la section 2.1.</p>
+    <p>Filter: appliquer des filtres aux données. Normalement les résultats sont données comme des booléens. Supposons, par exemple, que nous voulons distinguer les joueurs qui jouent pour la France. Dans l’onglet Filter sélectionnez Library >   Attributes > Equal > country et dans la fenêtre qui s'ouvre tapez France (ou n’importe quel pays). Notez que vous pouvez créer plusieurs filtres et même sous-filtres. Il y a aussi des opérations comme Intersection et union dans le menu Library > Operator. Après avoir choisi le filtre que vous convient, exporter comme une nouvelle colonne et il sera disponible comme toutes les autres données. L’image suivante montre le résultat d’un filtre pour les joueurs français. </p>
+    <img src="images/France.svg" class="col-m-12 col-11">
   </section>
 
   <section class="col-11 col-m-12">
