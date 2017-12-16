@@ -43,10 +43,37 @@
   </section>
 
   <section>
-    <h3>2.3. Spatialisation</h3>
+    <h3>2.2. Spatialisation</h3>
     <p>Vous devrez avoir à cet étape des noeuds et arcs en couleur et de différentes tailles. Mais leur position dans l'espace est encore la même, donc pas très visible.</p>
     <p>Trouvez l’onglet Layout. Vous verrez plusieurs options disponibles. Chacune d'entre elles est un algorithme de réorganisations des noeuds dans l’espace. Essayez-en quelques un, changez les paramètres… Vous verrez qu’il y a des groupes qui commencent à se former.</p>
     <p>Vos graphes doivent ressembler aux graphes suivants, pour ces algorithmes.</p>
+  </section>
+
+  <section>
+    <h3>2.3. Data Laboratory</h3>
+
+  </section>
+
+  <section>
+    <h2>3. Two-mode graphes</h2>
+    <p>Comme vous pouvez le penser, cela signifie : un graphe dont les noeuds peuvent avoir des noeuds de deux types différents.</p>
+    <p>Pour cet étape, créez un nouveau workspace et importez les données des fichiers arcs-clubs-countries-2014.csv, arcs-clubs-countries-2014.csv et noeuds-clubs-countries-2014.csv exactement comme la dernière fois. Maintenant, nous avons des noeuds qui peuvent être de deux classes: country ou club. Chaque arc lie un club à un pays à qui il envoie des joueurs, avec un poids qui a le valeur de combien de joueurs il envoie.</p>
+    <p>Vous pouvez essayer de refaire tout ce qu’on a fait jusqu'ici : visualiser les noeuds en fonction de sa classe, son pays, quantité de joueurs. Profitez-en pour regarder aussi l'effet des poids des arcs dans la visualisation, qui n’était pas possible lors du dernier exemple.  </p>
+    <p>Nous pouvons voir tout cela, mais on n’a pas vraiment d’informations intéressantes. Il est évident que les noeuds de pays sont plus gros que les noeuds des clubs, par exemple. Comme on sait qu’il y a deux classes, l'intérêt et de savoir comment les noeuds de l’une sont liés en fonction de ceux de l’autre.</p>
+    <p>Pour cela, nous avons besoin d'un plugin.</p>
+  </section>
+
+  <section>
+    <h3>3.1. Plugins</h3>
+    <p>Les plugins sont des modules additionnels qui peuvent être installés pour offrir au logiciel plus fonctionnalitées. Cliquez sur Tools > Plugins et une nouvelle fenêtre s’ouvre. Vous pouvez maintenant regarder tous les plugins qui sont déjà installés (quelques uns viennent par défaut quand Gephi est installé), ceux qui sont disponibles et les mises à jour. Vous pouvez aussi installer un nouveau dans l’onglet Available Plugins. </p>
+    <p>Installez le plugin MultiMode Networks Projection, nous allons l’utiliser. Attention : pour que le plugins (ou les actualisations) soient disponibles, il faut réinitialiser Gephi.</p>
+  </section>
+
+  <section>
+    <h3>3.2. MultiMode Networks Projection</h3>
+    <p>Après avoir réinitialisé Gephi, vous verrez une nouvelle fenêtre qui correspond à ce nouveau plugin. Cliquez sur Load attributes et ensuite sélectionnez  class, Club - Country et Country - Club. Cochez les cases Remove Edges et Remove nodes et finalement Run! </p>
+    <p>Allez d'abord sur Data Table. Les noeuds qui étaient de classe Country ont été enlevés et des nouveaux arcs ont été créés. En fait, pour chaque deux noeuds Club qui étaient à un noeud Country, le plugin a ajouté un nouvel arc. Alors on peut visualiser les interactions entre les types en fonction des joueurs qui iront jouer ensemble dans différents pays. </p>
+    <p>Nous pouvons faire l’inverse aussi. Avec Country - Club et Club - Country nous allons avoir seulement les noeuds Country à la fin et nous pourrons regarder les pays qui reçoivent des joueurs des mêmes clubs.</p>
   </section>
 
 </body>
