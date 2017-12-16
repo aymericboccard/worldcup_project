@@ -21,6 +21,32 @@
 
   <section>
     <h2>1. Données</h2>
+    <p>Aujourd’hui c’est le 14 de décembre de 2017. Nous sommes à exactement 6 mois de l’ouverture de la Coupe du Monde Fifa 2018!</p>
+    <p>Ainsi, les données que nous allons utiliser dans ce tutoriel sont liées à cette thématique et vous pouvez les trouver <a href="http://www.engagedata.eu/dataset/87646/world-cup-2014-squads-broken-down-by-club-age-and-caps-data-enrichment/">ici</a>. Vous pouvez les télécharger et explorer tout ce qui est à votre disposition. Bien sur vous pouvez aussi trouver d’autres données sur internet sur n’importe quel sujet. Il faut aussi penser au format de ces données.</p>
+    <p>Pour faire notre visualisation sur Gephi, on a besoin d'au moins deux fichiers: un pour les noeuds et un autre pour les arcs. Alors vous aurez sûrement besoin de transformer vos données avant des les utiliser sur Gephi. Vous pouvez télécharger <a href="">ici</a> le script en R qui a été écrit pour ce tutoriel.</p>
+  </section>
+
+  <section>
+    <h2>2. One-mode graphes</h2>
+    <p>Un graphe one-mode possède seulement un type de noeud. Dans notre cas, tous les noeuds sont les joueurs de la coupe du monde de 2014. Cela nous fait 32 x 23 = 736 noeuds.</p>
+    <p>La première étape est d’importer les données dans notre data laboratory. Pour cela, cliquez sur new project (dans file) et puis sur Import Spreadsheet. Nous allons commencer par importer les trois fichiers suivants: noeuds-2014.csv, arcs-countries-2014.csv et arcs-clubs-2014.csv. À chaque fois, vous verrez qu’il y a deux étapes pour l'importation. Premièrement, il faut choisir si les données correspondent à des noeuds ou des arcs. Deuxièmement, il faut choisir quelles colonnes seront importées et les types de données qu’elles contiennent.</p>
+    <p>Attention! À partir du deuxième fichier, n'oubliez pas de sélectionner l’option Append to existing workspace au moment de confirmer l'importation. </p>
+    <p>Après cela, vous verrez une image dans votre écran du graphe que nous venons d’importer. Oui, elle n’est pas du tout compréhensible! Allons changer cela!</p>
+  </section>
+
+  <section>
+    <h3>2.1. Tailles et couleurs de noeuds</h3>
+    <p>Sélectionnez l’onglet Appearance. Vous trouverez les options pour les noeuds et arcs. Pour les noeuds, on a quatre options: la couleur et la taille des noeuds , la couleur et la taille du texte. </p>
+    <p>Pour la taille, on a deux options: unique et ranking. Comme le nom le suggère, l’option unique sert à choisir une seule taille pour tous les noeuds. L’option ranking va donner des tailles différentes en fonction du paramètre choisi. Sélectionnez le champ Degree et regardez le résultat. Les noeuds avec le plus grand rang sont plus grand que les autres.</p>
+    <p>Pour la couleur on a exactement la même logique et on a une autre option: Partition. Cette option nous permet visualiser en couleurs différents attributs qui sont donnés comme texte. Sélectionnez le champ country et regardez le résultat. Chaque pays a une couleur différente. </p>
+    <p>Observation: comme vous avez certainement observé, on a les mêmes options pour les arcs dans l’onglet Edges. La logique pour les utiliser est la même.</p>
+  </section>
+
+  <section>
+    <h3>2.3. Spatialisation</h3>
+    <p>Vous devrez avoir à cet étape des noeuds et arcs en couleur et de différentes tailles. Mais leur position dans l'espace est encore la même, donc pas très visible.</p>
+    <p>Trouvez l’onglet Layout. Vous verrez plusieurs options disponibles. Chacune d'entre elles est un algorithme de réorganisations des noeuds dans l’espace. Essayez-en quelques un, changez les paramètres… Vous verrez qu’il y a des groupes qui commencent à se former.</p>
+    <p>Vos graphes doivent ressembler aux graphes suivants, pour ces algorithmes.</p>
   </section>
 
 </body>
